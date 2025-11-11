@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vídeos Aula - Curso de Bateria</title>
+<style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Arial', sans-serif; background:#0b0013; color:#fff; }
+
+    /* Cabeçalho */
+    header {
+        position: fixed;
+        top:0;
+        width:100%;
+        background: rgba(11,0,19,0.85);
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:15px 30px;
+        z-index:1001;
+        border-bottom:2px solid #ff0000;
+        box-shadow:0 0 20px #ff0000,0 0 40px #ff3333;
+    }
+    header h1 {
+        font-size:28px;
+        color:#ff0000;
+        text-shadow:0 0 5px #ff0000,0 0 10px #ff3333,0 0 20px #ff6666;
+    }
+
+    .hamburger { cursor:pointer; display:flex; flex-direction:column; justify-content:space-between; width:25px; height:20px; z-index:1002; position:relative; }
+    .hamburger div { height:3px; background:#ff0000; border-radius:2px; box-shadow:0 0 5px #ff0000,0 0 10px #ff3333; }
+
+    nav {
+        position: fixed;
+        top:0;
+        right:-250px;
+        width:250px;
+        height:100%;
+        background: rgba(11,0,19,0.95);
+        display:flex;
+        flex-direction:column;
+        padding-top:60px;
+        transition:right 0.3s;
+        z-index:1003;
+        border-left:2px solid #ff0000;
+    }
+    nav a {
+        padding:15px 20px;
+        text-decoration:none;
+        color:#ff0000;
+        font-weight:bold;
+        text-shadow:0 0 5px #ff0000,0 0 10px #ff3333;
+        transition:all 0.3s;
+    }
+    nav a:hover {
+        color:#ff6666;
+        text-shadow:0 0 10px #ff6666,0 0 20px #ff9999;
+        background:rgba(255,0,0,0.1);
+    }
+
+    main {
+        padding-top:120px;
+        max-width:1000px;
+        margin:0 auto;
+        padding-left:20px;
+        padding-right:20px;
+        text-align:center;
+    }
+
+    h2 { color:#ff0000; font-size:28px; margin-bottom:15px; text-shadow:0 0 10px #ff0000,0 0 20px #ff3333,0 0 40px #ff6666; }
+
+    .download-apostila {
+        margin: 25px 0;
+    }
+    .download-apostila button {
+        background: linear-gradient(90deg, #ff0000, #ff3333, #ff0000);
+        color: #0b0013;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 12px;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: bold;
+        box-shadow: 0 0 10px #ff0000, 0 0 20px #ff3333, 0 0 30px #ff6666;
+        transition: all 0.3s;
+    }
+    .download-apostila button:hover {
+        background: linear-gradient(90deg, #ff3333, #ff0000, #ff3333);
+        box-shadow: 0 0 20px #ff3333, 0 0 30px #ff0000, 0 0 40px #ff6666;
+        color: #0b0013;
+    }
+
+    .video-module {
+        margin-bottom:40px;
+        border:2px solid #ff0000;
+        border-radius:15px;
+        padding:15px;
+        box-shadow:0 0 15px #ff0000,0 0 30px #ff3333;
+        background: rgba(11,0,19,0.8);
+    }
+    .video-module video {
+        width:100%;
+        border-radius:10px;
+        margin-bottom:10px;
+    }
+    .video-module p {
+        color:#fff;
+        text-align:left;
+        line-height:1.6;
+        text-shadow:0 0 5px #ff0000,0 0 10px #ff3333;
+        font-size:15px;
+    }
+
+    footer {
+        text-align:center;
+        padding:20px;
+        margin-top:50px;
+        background: rgba(11,0,19,0.9);
+        color:#888;
+        border-top:2px solid #ff0000;
+        box-shadow:0 0 20px #ff0000;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Curso de Bateria - Vitor</h1>
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</header>
+
+<nav id="menu">
+    <a href="home.html">Início</a>
+    <a href="sobre.html">Sobre mim</a>
+    <a href="videos.html">Vídeos aula</a>
+</nav>
+
+<main>
+    <h2>Curso Completo de Bateria</h2>
+
+    <!-- Botão para baixar apostila -->
+    <div class="download-apostila">
+        <a href="apostila.pdf" download>
+            <button>Baixar Apostila</button>
+        </a>
+    </div>
+
+    <!-- Módulos do curso -->
+    <div class="video-module">
+        <h3>1. Introdução</h3>
+        <video controls>
+            <source src="video1.mp4" type="video/mp4">
+        </video>
+        <p>
+            Apresentação do instrutor e do curso.<br>
+            Objetivos do curso, apresentação da bateria e equipamentos.<br>
+            Como sentar e postura correta.
+        </p>
+    </div>
+
+    <div class="video-module">
+        <h3>2. Fundamentos da Bateria</h3>
+        <video controls>
+            <source src="video2.mp4" type="video/mp4">
+        </video>
+        <p>
+            Segurar as baquetas corretamente, noções de tempo e ritmo.<br>
+            Leitura básica de partituras e contagem de compassos.
+        </p>
+    </div>
+
+    <div class="video-module">
+        <h3>3. Rudimentos Básicos</h3>
+        <video controls>
+            <source src="video3.mp4" type="video/mp4">
+        </video>
+        <p>
+            Paradiddle simples e duplo, rollo, flam e drag.<br>
+            Aplicando rudimentos no kit de bateria.
+        </p>
+    </div>
+
+    <div class="video-module">
+        <h3>4. Técnicas de Bumbo e Pedal</h3>
+        <video controls>
+            <source src="video4.mp4" type="video/mp4">
+        </video>
+        <p>
+            Uso correto do pedal, técnica de pé direito ou esquerdo.<br>
+            Batidas simples com bumbo e caixa.
+        </p>
+    </div>
+
+    <div class="video-module">
+        <h3>5. Batidas e Grooves Básicos</h3>
+        <video controls>
+            <source src="video5.mp4" type="video/mp4">
+        </video>
+        <p>
+            Rock básico, pop, funk, blues e shuffle.<br>
+            Introdução a batidas com hi-hat aberto e fechado.
+        </p>
+    </div>
+
+    <div class="video-module">
+        <h3>6. Independência de Mãos e Pés</h3>
+        <video controls>
+            <source src="video6.mp4" type="video/mp4">
+        </video>
+        <p>
+            Exercícios de coordenação, grooves com contratempos.<br>
+            Introdução a fills curtos.
+        </p>
+    </div>
+
+    <div class="video-module">
+        <h3>7. Fills e Ornamentações</h3>
+        <video controls>
+            <source src="video7.mp4" type="video/mp4">
+        </video>
+        <p>
+            Fills de 2 e 4 tempos, usando toms e caixa.<br>
+            Transição entre partes da música.
+        </p>
+    </div>
+
+    <div class="video-module">
+        <h3>8. Dinâmica e Expressão</h3>
+        <video controls>
+            <source src="video8.mp4" type="video/mp4">
+        </video>
+        <p>
+            Tocar suave ou forte, acentos e ghost notes.<br>
+            Controlando volume e energia na música.
+        </p>
+    </div>
+
+    <div class="video-module">
+        <h3>9. Estilos Musicais</h3>
+        <video controls>
+            <source src="video9.mp4" type="video/mp4">
+        </video>
+        <p>
+            Rock, pop, funk, blues, jazz, metal.<br>
+            Características e grooves típicos de cada estilo.
+        </p>
+    </div>
+
+    <div class="video-module">
+        <h3>10. Tocar com Música</h3>
+        <video controls>
+            <source src="video10.mp4" type="video/mp4">
+        </video>
+        <p>
+            Como acompanhar músicas, marcar tempo e frases.<br>
+            Improvisação e fills criativos.
+        </p>
+    </div>
+
+    <div class="video-module">
+        <h3>11. Dicas de Estudo</h3>
+        <video controls>
+            <source src="video11.mp4" type="video/mp4">
+        </video>
+        <p>
+            Como praticar sozinho, cronograma de exercícios.<br>
+            Manutenção do kit de bateria.
+        </p>
+    </div>
+
+    <div class="video-module">
+        <h3>12. Conclusão</h3>
+        <video controls>
+            <source src="video12.mp4" type="video/mp4">
+        </video>
+        <p>
+            Revisão do curso, próximos passos e incentivo.<br>
+            Agradecimento final do instrutor.
+        </p>
+    </div>
+
+</main>
+
+<footer>
+    © 2025 Curso de Bateria - Vitor. Todos os direitos reservados.
+</footer>
+
+<script>
+    const menu = document.getElementById('menu');
+    let open = false;
+    function toggleMenu() {
+        if(!open) { menu.style.right='0'; open=true; }
+        else { menu.style.right='-250px'; open=false; }
+    }
+</script>
+
+</body>
+</html>
