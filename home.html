@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Curso de Bateria - Home</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #121212;
+        color: white;
+    }
+
+    header {
+        background: #ff0044;
+        padding: 20px;
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    nav {
+        background: #1a1a1a;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 10px 0;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        color: #ff0044;
+    }
+
+    .content {
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 0 20px;
+    }
+
+    h2 {
+        color: #ff0044;
+    }
+
+    .module {
+        background: #1a1a1a;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #000;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .module img {
+        width: 150px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .module-info {
+        flex: 1;
+    }
+
+    .module-info h3 {
+        margin-top: 0;
+    }
+
+    .module-info p {
+        margin-bottom: 10px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: #1a1a1a;
+        margin-top: 30px;
+        color: #888;
+    }
+
+    button {
+        background: #ff0044;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    button:hover {
+        background: #ff3366;
+    }
+
+    a.button-link {
+        text-decoration: none;
+    }
+
+    /* Modal */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background: rgba(0,0,0,0.9);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-content {
+        position: relative;
+        width: 80%;
+        max-width: 800px;
+        background: #1a1a1a;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .modal-content video {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        color: white;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .close:hover {
+        color: #ff0044;
+    }
+
+</style>
+</head>
+<body>
+
+<header>
+    Curso de Bateria - Vitor
+</header>
+
+<nav>
+    <a href="#introducao">Introdução</a>
+    <a href="#modulos">Módulos</a>
+    <a href="#contato">Contato</a>
+</nav>
+
+<div class="content">
+
+    <section id="introducao">
+        <h2>Bem-vindo ao Curso de Bateria</h2>
+        <p>Aprenda bateria do zero ao avançado com aulas detalhadas, exercícios práticos e vídeos exclusivos. Este curso foi feito para quem quer evoluir rápido e com qualidade!</p>
+    </section>
+
+    <section id="modulos">
+        <h2>Módulos do Curso</h2>
+
+        <div class="module">
+            <img src="thumb1.jpg" alt="Módulo 1" onclick="openModal('video1.mp4')">
+            <div class="module-info">
+                <h3>Módulo 1: Introdução à Bateria</h3>
+                <p>Conheça a bateria, postura correta, posição das mãos e primeiros exercícios básicos.</p>
+                <button onclick="openModal('video1.mp4')">Assistir Aula</button>
+            </div>
+        </div>
+
+        <div class="module">
+            <img src="thumb2.jpg" alt="Módulo 2" onclick="openModal('video2.mp4')">
+            <div class="module-info">
+                <h3>Módulo 2: Ritmos Básicos</h3>
+                <p>Aprenda os ritmos mais populares, coordenação entre mãos e pés e técnicas de prática.</p>
+                <button onclick="openModal('video2.mp4')">Assistir Aula</button>
+            </div>
+        </div>
+
+        <div class="module">
+            <img src="thumb3.jpg" alt="Módulo 3" onclick="openModal('video3.mp4')">
+            <div class="module-info">
+                <h3>Módulo 3: Técnicas Avançadas</h3>
+                <p>Explore fills, viradas e improvisação para tocar músicas complexas.</p>
+                <button onclick="openModal('video3.mp4')">Assistir Aula</button>
+            </div>
+        </div>
+
+        <div class="module">
+            <img src="thumb4.jpg" alt="Módulo 4" onclick="openModal('video4.mp4')">
+            <div class="module-info">
+                <h3>Módulo 4: Músicas Completas</h3>
+                <p>Aprenda músicas completas passo a passo e pratique suas habilidades em contexto real.</p>
+                <button onclick="openModal('video4.mp4')">Assistir Aula</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>Para dúvidas e suporte, clique no botão abaixo para falar no WhatsApp:</p>
+        <a href="https://wa.me/5521986757570" target="_blank" class="button-link">
+            <button>Falar no WhatsApp</button>
+        </a>
+    </section>
+
+</div>
+
+<footer>
+    © 2025 Curso de Bateria - Vitor. Todos os direitos reservados.
+</footer>
+
+<!-- Modal -->
+<div id="videoModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <video id="modalVideo" controls>
+            <source src="" type="video/mp4">
+            Seu navegador não suporta vídeo.
+        </video>
+    </div>
+</div>
+
+<script>
+    const modal = document.getElementById('videoModal');
+    const modalVideo = document.getElementById('modalVideo');
+
+    function openModal(videoSrc) {
+        modal.style.display = 'flex';
+        modalVideo.src = videoSrc;
+        modalVideo.play();
+    }
+
+    function closeModal() {
+        modal.style.display = 'none';
+        modalVideo.pause();
+        modalVideo.src = "";
+    }
+
+    // Fecha o modal clicando fora do conteúdo
+    window.onclick = function(event) {
+        if(event.target === modal) {
+            closeModal();
+        }
+    }
+</script>
+
+</body>
+</html>
